@@ -2,7 +2,8 @@
 
 @section('content')
 <div class = "centered-div">
-       <div class= "large-text" >Pizza Hub</div>
+    <img src="/img/pizza-house.png" alt="pizza house">
+       <div class= "large-text" >The Kryptonite Pizza House</div>
 
 
 
