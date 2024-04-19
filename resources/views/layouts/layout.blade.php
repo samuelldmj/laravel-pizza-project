@@ -9,5 +9,6 @@
 </head>
 <body>
 @yield('content')
+<footer>CopyRight {{date("m-d-y", strtotime("Today"))}} Samuelldmj</footer>
 </body>
 </html>
