@@ -5,8 +5,7 @@
     <section>
     <img src="/img/pizza-house.png" alt="pizza house">
        <div class= "large-text" >The Kryptonite Pizza House</div>
-
-
+       <a href="/pizza/create">Order a Pizza</a>
     </section>
 </div>
 @endsection

@@ -2,22 +2,19 @@
     margin: 0;
     padding: 0;
 }
-body {
-    /* background-color: #f0f0f0; Set your desired background color */
-}
 
 .centered-div {
     background-color: #fff;
     /* border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    margin: 10vh auto;
+    margin: 8vh auto;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-section {
-}
+/* section {
+} */
 
 .large-text {
     text-align: center;
@@ -25,7 +22,7 @@ section {
     color: rgb(96, 7, 96);
     text-transform: uppercase;
     border-bottom: 2px solid;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 footer {

@@ -23,7 +23,7 @@ class PizzaController extends Controller
     }
 
     public function showRouteParameter($id){
-        //changed the file from pizza to pizzas.details
+        //changed the file from /pizza/{$id} to pizzas.details
         $pizzaId = Pizza::findOrfail($id);
         return view('pizzas.details', ['code' => $pizzaId] );
     }
