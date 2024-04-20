@@ -5,6 +5,7 @@
 <div class="wrapper create-pizza">
 <h1>Book a new pizza</h1>
 <form action="/pizza" method="POST">
+    @csrf
     <label for="name" >Your Name:</label>
     <input type="text" name="name" id="name"><br><br>
 

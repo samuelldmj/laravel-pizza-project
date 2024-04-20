@@ -29,6 +29,28 @@ class PizzaController extends Controller
     }
 
     public function create(){
+        
         return view('pizzas.create');
+    }
+
+    public function store(){
+        //logging to the console
+        // error_log(request('name'));
+        // error_log(request('type'));
+        // error_log(request('base'));
+
+        //pushing to the db
+        //the column becomes our properties when using the model class.
+        $pizzas = new Pizza();
+
+        $pizzas->name = request('name');
+        $pizzas->type = request('type');
+        $pizzas->base = request('base');
+      
+        //displaying to the terminal.
+        // error_log($pizzas);
+        $pizzas->save();
+
+        return redirect('/')->with('message', 'Thank you for ordering.');
     }
 }
