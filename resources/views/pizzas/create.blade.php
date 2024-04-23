@@ -25,6 +25,15 @@
     <option value="thick">Thick</option>
     </select>
 
+    <fieldset>
+        <label >Add Some spices:</label><br>
+        <input type="checkbox"  name = "spices[]"    value="mushroom">Mushroom <br>
+        <input type="checkbox"  name = "spices[]"    value="garlic">Garlic <br>
+        <input type="checkbox"  name = "spices[]"    value="red pepper flakes">Red Pepper Flakes <br>
+        <input type="checkbox"  name = "spices[]"    value="parmesan cheese">Parmesan Cheese <br>
+        <input type="checkbox"  name = "spices[]"    value="parsley">Parsley
+    </fieldset>
+
     <input type="submit" value="Order Pizza">
 </form>
 

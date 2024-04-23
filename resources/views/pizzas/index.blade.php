@@ -24,7 +24,6 @@
         <p>
           {{$piz->id}} - {{$piz->name}} - {{$piz->type}} - {{$piz->base}} 
         </p>
-
         @endforeach
         </section>
     </div>

@@ -14,4 +14,9 @@ class Pizza extends Model
 
     protected $table = "pizza_project";
 
+    //save this as a json string in array format.
+    protected $casts = [
+        'spices' => 'array'
+    ];
+
 }

@@ -15,9 +15,9 @@ class PizzaController extends Controller
     // ];
 
     //from the db
-    // $pizzas = Pizza::all();
+    $pizzas = Pizza::all();
     // $pizzas = Pizza::orderBy('name')->get();
-    $pizzas = Pizza::where('type', 'huwain')->get();
+    // $pizzas = Pizza::where('type', 'huwain')->get();
     //changed the file from /pizza to pizzas.index
         return view('pizzas.index', ['pizz' => $pizzas] );
     }
@@ -29,7 +29,6 @@ class PizzaController extends Controller
     }
 
     public function create(){
-        
         return view('pizzas.create');
     }
 
@@ -40,16 +39,22 @@ class PizzaController extends Controller
         // error_log(request('base'));
 
         //pushing to the db
-        //the column becomes our properties when using the model class.
+        //the column becomes our properties when using the model class which is interacting with our db.
         $pizzas = new Pizza();
 
         $pizzas->name = request('name');
         $pizzas->type = request('type');
         $pizzas->base = request('base');
+        $pizzas->spices = request('spices');
       
         //displaying to the terminal.
         // error_log($pizzas);
+
+        // //save into the table in the db.
         $pizzas->save();
+
+        //display it on the /pizza page
+        // return request('spices');
 
         return redirect('/')->with('message', 'Thank you for ordering.');
     }
