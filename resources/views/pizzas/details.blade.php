@@ -12,6 +12,13 @@
         <li>{{$spice}}</li>
         @endforeach
     </ul>
+
+    <form  action="/pizza/{{ $code->id }}" method="POST">
+    @csrf
+    @method('DELETE')
+
+    <button>Clear Order</button>
+    </form>
 </div>
 <a href="/pizza" class="back"><- Back to pizza</a>
 @endsection
