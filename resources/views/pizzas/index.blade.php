@@ -1,9 +1,8 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
-    <div class = "centered-div">
-        <section>
-       <h1 class= "large-text" >Pizza List</h1>
+    <div class ="wrapper pizza-index">
+       <h1>Pizza Orders</h1>
        
             <!-- using for loop -->
             <!-- from the controller file -->
@@ -21,12 +20,11 @@
         <!-- from the db -->
 
         @foreach($pizz as $piz)
-        <p>
-          {{$piz->id}} - {{$piz->name}} - {{$piz->type}} - {{$piz->base}} 
-        </p>
+        <div class= "pizza-item">
+            <img src="/img/pizza.png" alt="pizza icon" >
+           <h4><a href="/pizza/{{$piz->id}}">{{$piz->name}}</a></h4>
+        </div>
         @endforeach
-        </section>
     </div>
-
     @endsection
     
