@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- /* list of pizzas ordered by customers, 
+with a clickable link on the name which redirect you to pizza.details where an order can be deleted
+*/  -->
     <div class ="wrapper pizza-index">
        <h1>Pizza Orders</h1>
        
@@ -22,7 +26,7 @@
         @foreach($pizz as $piz)
         <div class= "pizza-item">
             <img src="/img/pizza.png" alt="pizza icon" >
-           <h4><a href="/pizza/{{$piz->id}}">{{$piz->name}}</a></h4>
+           <h4><a href="{{route('pizza.details', $piz->id)}}">{{$piz->name}}</a></h4>
         </div>
         @endforeach
     </div>

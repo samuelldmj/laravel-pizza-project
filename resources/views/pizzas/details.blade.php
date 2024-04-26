@@ -2,6 +2,8 @@
 
 @section('content')
 
+<!-- /*This page handles how pizza is deleted*/ -->
+
 <div class="wrapper pizza-details">
     <h1>Order for {{$code->name}}</h1>
     <p class="type">Type - {{$code->type}}</p>
@@ -13,12 +15,13 @@
         @endforeach
     </ul>
 
-    <form  action="/pizza/{{ $code->id }}" method="POST">
+    <!-- Deleting by id occurs here. -->
+    <form  action="{{route('pizza.destroy', $code->id)}}" method="POST">
     @csrf
     @method('DELETE')
 
     <button>Clear Order</button>
     </form>
 </div>
-<a href="/pizza" class="back"><- Back to pizza</a>
+<a href="{{route('pizza.index')}}" class="back"><- Back to pizza</a>
 @endsection
